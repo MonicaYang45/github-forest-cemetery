@@ -1,0 +1,171 @@
+@import 'tool'
+body 
+  font-family: 'jf-bunguan', 'Noto Sans', sans-serif
+
+//header
+header
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1000
+  background-color: rgba(255, 255, 255, 0.1)
+  backdrop-filter: blur(8px)
+  -webkit-backdrop-filter: blur(8px)
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+
+//RWD 斷點 
+$breakpoint-mobile: 768px
+
+.classynav
+    // 隱藏漢堡圖標，桌面版不需要
+    .menu-toggle
+        display: none
+        cursor: pointer
+        padding: 10px
+        font-size: 36px
+        text-align: right
+        color: #76b347
+        line-height: 1.5
+
+    ul
+        list-style: none
+        padding: 10px 0
+        margin: 0
+        display: flex
+        justify-content: center
+        
+        // 所有主要連結
+        > li 
+            position: relative //為下拉菜單定位
+            
+            > a 
+                display: block
+                padding: 15px 20px
+                color: $White
+                text-decoration: underline solid #76b347
+                text-underline-offset: 8px
+                transition: background-color 0.3s, color 0.3s
+                white-space: nowrap
+                &:hover
+                  text-decoration: none
+.classynav ul li 
+    // 下拉菜單容器
+    .dropdown 
+        position: absolute
+        top: 110% // 位於主菜單項下方
+        left: 0
+        min-width: 180px
+        background-color: #76b347
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+        z-index: 1000
+        opacity: 0 // 預設隱藏
+        visibility: hidden
+        transition: opacity 0.3s, visibility 0.3s
+        
+        // 確保下拉菜單是垂直列表
+        display: block
+
+        // 下拉菜單項
+        li
+            display: block // 垂直排列
+            a
+                padding: 10px 15px
+                color: $White
+                &:hover
+                    background-color: #76b347
+                    color: white
+
+    // 懸停顯示下拉菜單
+    &:hover > .dropdown
+        opacity: 1
+        visibility: visible
+
+@media (max-width: $breakpoint-mobile) 
+    .classynav 
+        background-color: $White
+        // 顯示漢堡圖標
+        .menu-toggle 
+            display: block
+        // 預設隱藏主菜單
+        ul 
+            display: none 
+            flex-direction: column // 垂直堆疊
+            width: 100%
+            text-align: left
+            position: absolute 
+            top: 50px // 往下移動一點，避開漢堡圖標
+            left: 0
+            background-color: $White
+            z-index: 999
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
+            // 當菜單有 active class 時顯示 (JS 控制)
+            &.active
+                display: flex
+
+            // 手機版菜單項變為區塊並佔滿寬度
+            > li
+                width: 100%
+                border-bottom: 1px solid #eee 
+
+                // 下拉選單處理
+                .dropdown 
+                    position: static // 取消絕對定位
+                    width: 100%
+                    border: none
+                    box-shadow: none
+                    background-color: lighten(#76b347, 3%)
+                    opacity: 1
+                    visibility: visible
+                    display: none // 預設隱藏，需要JS切換
+                    li a 
+                        padding-left: 30px
+
+                // JS 控制的展開狀態
+                &.dropdown-open > .dropdown 
+                    display: block
+                
+                // 桌面版懸停效果在手機上無效，但保留，避免意外干擾
+                &:hover > .dropdown
+                     opacity: 1
+                     visibility: visible
+
+
+
+
+//hero
+.hero
+  background-image: url('../img/hero.png')
+  background-size: cover
+  background-position: center bottom
+  min-height: 120vh
+  // padding-top: calc(100px + 70px)
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  .hero-text
+    padding:5% 13% 0
+    h1
+      line-height: 1.3
+      font-size: 52px
+      color: #e8e4d9
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+
+
+@media screen and (max-width: 991px)  
+  .classynav ul > li > a
+    padding: 15px 10px
+  .hero 
+    min-height: 100vh
+    .hero-text h1
+      font-size: 32px
+@media screen and (max-width: 768px) 
+  .classynav ul > li > a
+    color: #76b347
+@media screen and (max-width: 576px) 
+  .hero 
+    min-height: 75vh
+    .hero-text h1
+      font-size: 24px

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>森林公墓</title>
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+</head>
+<body>
+    <header>
+        <nav class="classynav">
+            <div class="menu-toggle" id="menuToggle">&#9776;</div> 
+
+            <ul id="mainMenu">
+                <li class="nav-links"><a href="petition.html">樹葬請願認同卡</a></li>   
+                <li><a href="support-card.html">支持樹葬認同卡</a></li>
+                <li class="has-dropdown"><a href="#">我需要幫忙</a>
+                    <ul class="dropdown">
+                        <li><a href="#">向新北市長陳情</a></li>
+                        <li><a href="#">向新北市陳情立案</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">我想支持樹葬</a></li>
+                <li><a href="vision.html">願景藍圖</a></li>
+                <li><a href="join.html">成為共創者</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- hero -->
+    <section>
+        <div class="hero">
+            <div class="hero-text">
+                <h1>往生後只有好人與壞人</h1>
+                <h1>讓好人總歸有好報～讓好人可以享有免費入土為安的ESG樹葬～讓愛與善聯合請願政府闢建五股觀音山生態森林生命公墓！</h1>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- header -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainMenu = document.getElementById('mainMenu');
+            // 選擇所有帶有下拉菜單的父連結
+            const dropdownToggles = document.querySelectorAll('.classynav .has-dropdown > a');
+            // 定義 RWD 斷點，應與 CSS 中的 $breakpoint-mobile 一致
+            const mobileBreakpoint = 768; 
+
+            // 1. 漢堡菜單開關
+            menuToggle.addEventListener('click', function() {
+                mainMenu.classList.toggle('active'); // 切換主菜單的顯示/隱藏
+            });
+
+            // 2. 手機版下拉菜單切換
+            dropdownToggles.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    // 檢查是否處於手機視圖
+                    if (window.innerWidth <= mobileBreakpoint) {
+                        e.preventDefault(); // 阻止連結跳轉
+                        const parentLi = link.closest('li');
+                        parentLi.classList.toggle('dropdown-open'); //切換下拉菜單的顯示/隱藏
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
