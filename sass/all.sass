@@ -1,11 +1,12 @@
 @import 'tool'
 body 
   font-family: 'jf-bunguan', 'Noto Sans', sans-serif
+  background-color: #e8e4d9
 
-//header
+//Header
 header
   width: 100%
-  position: fixed
+  // position: fixed
   top: 0
   left: 0
   z-index: 1000
@@ -14,158 +15,344 @@ header
   -webkit-backdrop-filter: blur(8px)
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
 
-//RWD 斷點 
-$breakpoint-mobile: 768px
 
+//Nav
 .classynav
-    // 隱藏漢堡圖標，桌面版不需要
-    .menu-toggle
-        display: none
-        cursor: pointer
-        padding: 10px
-        font-size: 36px
-        text-align: right
-        color: #76b347
-        line-height: 1.5
-
-    ul
-        list-style: none
-        padding: 10px 0
-        margin: 0
-        display: flex
-        justify-content: center
-        
-        // 所有主要連結
-        > li 
-            position: relative //為下拉菜單定位
-            
-            > a 
-                display: block
-                padding: 15px 20px
-                color: $White
-                text-decoration: underline solid #76b347
-                text-underline-offset: 8px
-                transition: background-color 0.3s, color 0.3s
-                white-space: nowrap
-                &:hover
-                  text-decoration: none
+  .menu-toggle
+      display: none
+      cursor: pointer
+      padding: 10px
+      font-size: 36px
+      text-align: right
+      color: $main-color
+      line-height: 1.5
+  ul
+      list-style: none
+      padding: 10px 0
+      margin: 0
+      display: flex
+      justify-content: center
+      
+      > li 
+          position: relative
+          
+          > a 
+              display: block
+              padding: 15px 20px
+              color: $White
+              text-decoration: underline solid #76b347
+              text-underline-offset: 8px
+              transition: background-color 0.3s, color 0.3s
+              white-space: nowrap
+              &:hover
+                text-decoration: none
 .classynav ul li 
-    // 下拉菜單容器
-    .dropdown 
-        position: absolute
-        top: 110% // 位於主菜單項下方
-        left: 0
-        min-width: 180px
-        background-color: #76b347
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
-        z-index: 1000
-        opacity: 0 // 預設隱藏
-        visibility: hidden
-        transition: opacity 0.3s, visibility 0.3s
-        
-        // 確保下拉菜單是垂直列表
-        display: block
+  .dropdown 
+      position: absolute
+      top: 110%
+      left: 0
+      min-width: 180px
+      background-color: #76b347
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+      z-index: 1000
+      opacity: 0 
+      visibility: hidden
+      transition: opacity 0.3s, visibility 0.3s
+      display: block
 
-        // 下拉菜單項
-        li
-            display: block // 垂直排列
-            a
-                padding: 10px 15px
-                color: $White
-                &:hover
-                    background-color: #76b347
-                    color: white
-
-    // 懸停顯示下拉菜單
-    &:hover > .dropdown
-        opacity: 1
-        visibility: visible
-
-@media (max-width: $breakpoint-mobile) 
-    .classynav 
-        background-color: $White
-        // 顯示漢堡圖標
-        .menu-toggle 
-            display: block
-        // 預設隱藏主菜單
-        ul 
-            display: none 
-            flex-direction: column // 垂直堆疊
-            width: 100%
-            text-align: left
-            position: absolute 
-            top: 50px // 往下移動一點，避開漢堡圖標
-            left: 0
-            background-color: $White
-            z-index: 999
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
-
-            // 當菜單有 active class 時顯示 (JS 控制)
-            &.active
-                display: flex
-
-            // 手機版菜單項變為區塊並佔滿寬度
-            > li
-                width: 100%
-                border-bottom: 1px solid #eee 
-
-                // 下拉選單處理
-                .dropdown 
-                    position: static // 取消絕對定位
-                    width: 100%
-                    border: none
-                    box-shadow: none
-                    background-color: lighten(#76b347, 3%)
-                    opacity: 1
-                    visibility: visible
-                    display: none // 預設隱藏，需要JS切換
-                    li a 
-                        padding-left: 30px
-
-                // JS 控制的展開狀態
-                &.dropdown-open > .dropdown 
-                    display: block
-                
-                // 桌面版懸停效果在手機上無效，但保留，避免意外干擾
-                &:hover > .dropdown
-                     opacity: 1
-                     visibility: visible
-
-
+      // 下拉菜單項
+      li
+          display: block
+          a
+              padding: 10px 15px
+              color: $White
+              &:hover
+                  background-color: #76b347
+                  color: white
+  &:hover > .dropdown
+      opacity: 1
+      visibility: visible
 
 
 //hero
-.hero
-  background-image: url('../img/hero.png')
-  background-size: cover
+.hero-section
+  margin-top: -80px
+  .hero-info
+    background-image: url('../img/hero.png')
+    background-size: cover
+    background-position: center bottom
+    min-height: 120vh
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    .hero-text
+      padding:5% 13% 0
+      h1
+        line-height: 1.3
+        font-size: 52px
+        color: #e8e4d9
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+
+//area
+.area
+  background-image: url('../img/tree.png')
+  position: relative
+  width: 100%
+  background-size: cover     
+  background-position: center top
+  background-repeat: no-repeat
+  height: 0
+  padding-top: 130%
+  margin-top: 270px
+  .area-info 
+    .area-text 
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 100
+      margin-top: -200px
+      writing-mode: vertical-rl
+      color: $secondary
+      h1 
+          font-size: 52px
+          padding-left: 5%
+      p 
+          font-size: 24px
+          max-height: 450px
+    .wave
+      position: absolute
+      bottom: 0
+
+
+.land 
+  background-image: url('../img/treasureland.png')
+  width: 100%
+  background-size: cover    
+  background-position: center top
+  background-repeat: no-repeat
+  min-height: 169vh
+  .land-text
+    color: $White
+    padding: 20px 15px
+    text-align: center
+  h2
+    font-size: 44px
+  h3
+    font-size: 28px
+  p
+    font-size: 24px
+  a
+    color: $blue
+    background-color: $White
+    border-radius: 30px
+    padding: 5px 10px
+    font-size: 18px
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+
+
+//framework
+.framework
+  margin-bottom: 50px
+  .title
+    color: #2a332e
+    padding: 30px 0
+    text-align: center
+  h1
+    font-size: 52px
+  h2
+    font-size: 44px
+  h3
+    font-size: 32px
+    text-align: center
+  p
+    font-size: 24px
+  .content
+    background-color: $White
+    color: $main-color
+    border-radius: 80px
+    padding: 40px 30px
+  .framework-info
+    .line
+      background-color: $main-color
+      width: 100%
+      height: 1px
+      margin: 50px 0 30px 0
+
+//goodperson
+.goodperson
+  background-image: url('../img/goodperson.png')
+  width: 100%
+  background-size: cover    
   background-position: center bottom
-  min-height: 120vh
-  // padding-top: calc(100px + 70px)
-  display: flex
-  align-items: center
-  justify-content: center
-  text-align: center
-  .hero-text
-    padding:5% 13% 0
-    h1
-      line-height: 1.3
-      font-size: 52px
-      color: #e8e4d9
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+  background-repeat: no-repeat
+  // min-height: 193vh
+  padding-bottom: 13%
+  .goodperson-top
+    color: #585959
+    display: flex
+    padding-top: 50px
+    .goodperson-info
+      width: 85%
+      .content
+        background-color: $White
+        border-radius: 30px
+        padding: 20px
+      .info-text
+        padding: 30px 5% 0 0
+        h2 
+          color: #dd0000
+    .goodperson-title
+      width: 15%
+      writing-mode: vertical-rl
+  h1
+    font-size: 52px
+    letter-spacing: 8px
+  h2
+    font-size: 32px
+  p
+    font-size: 24px
+  .goodperson-bottom
+    padding-top: 14%
+    color: $White
+    a
+      color: $blue
+      background-color: $White
+      border-radius: 30px
+      padding: 5px 10px
+      font-size: 20px
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
 
 
+
+
+
+//RWD
+@media screen and (min-width: 1200px)
+  .land
+    position: relative
+    .land-text
+      padding: 0
+      writing-mode: vertical-rl 
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      text-align: left
+      .land-title
+        padding: 40px 0 0 60px
+      .land-info
+        padding: 65px 0 500px 0
+        .land-paragraph
+          padding-left: 18%
+    a
+      padding: 10px 5px
+
+  
 @media screen and (max-width: 991px)  
   .classynav ul > li > a
     padding: 15px 10px
-  .hero 
+  .hero-section .hero-info
     min-height: 100vh
     .hero-text h1
       font-size: 32px
+  .area
+    margin-top: 370px
+    .area-info 
+      .area-text
+        margin-top: -330px
+        h1
+          font-size: 42px
+  .framework
+    h2
+      font-size: 32px
+    h1
+      font-size: 42px
+  .goodperson
+    padding-bottom: 21%
+  
 @media screen and (max-width: 768px) 
-  .classynav ul > li > a
-    color: #76b347
+  .classynav 
+    background-color: #e8e4d9
+    // 顯示漢堡圖標
+    .menu-toggle 
+        display: block
+    ul 
+        display: none 
+        flex-direction: column
+        width: 100%
+        text-align: left
+        position: absolute 
+        top: 65px
+        left: 0
+        background-color: #e8e4d9
+        z-index: 999
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+        &.active
+            display: flex
+        > li
+            width: 100%
+
+            // 下拉選單處理
+            .dropdown 
+                position: static
+                width: 100%
+                border: none
+                box-shadow: none
+                background-color: #76b347
+                opacity: 1
+                visibility: visible
+                display: none
+                li a 
+                    padding-left: 30px
+            &.dropdown-open > .dropdown 
+                display: block
+            &:hover > .dropdown
+                  opacity: 1
+                  visibility: visible
+            a
+              color: $main-color
+  .goodperson
+    padding-bottom: 52%
+
 @media screen and (max-width: 576px) 
-  .hero 
+  .hero-section .hero-info
     min-height: 75vh
     .hero-text h1
       font-size: 24px
+  .area-section .area-text
+    h1
+      font-size: 42px
+    p
+      font-size: 24px
+  .area .area-info .area-text p
+    font-size: 22px
+    max-height: 400px
+  .land
+    h2
+      font-size: 30px
+    h3
+      font-size: 24px
+    p 
+      line-height: 1.3
+      font-size: 20px
+    a
+      font-size: 14px
+  .framework
+    line-height: 1.3
+    .framework-info
+      .line
+        margin: 20px 0
+    p , h3
+      font-size: 20px
+    h2
+      font-size: 30px
+  .goodperson 
+    h1
+      font-size: 42px
+    h2
+      font-size: 28px
+    p
+      font-size: 20px
+    .goodperson-bottom
+      padding-top: 24%
