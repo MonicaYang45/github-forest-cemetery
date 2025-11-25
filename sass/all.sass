@@ -6,14 +6,25 @@ body
 //Header
 header
   width: 100%
-  // position: fixed
+  position: fixed
   top: 0
   left: 0
-  z-index: 1000
+  z-index: 990
   background-color: rgba(255, 255, 255, 0.1)
   backdrop-filter: blur(8px)
   -webkit-backdrop-filter: blur(8px)
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+.hero-header
+  position: relative
+
+//
+.more a
+  color: $blue
+  background-color: $White
+  border-radius: 30px
+  padding: 5px 10px
+  font-size: 20px
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
 
 
 //Nav
@@ -116,16 +127,18 @@ header
       writing-mode: vertical-rl
       color: $secondary
       h1 
-          font-size: 52px
-          padding-left: 5%
+        font-size: 52px
+        padding-left: 5%
       p 
-          font-size: 24px
-          max-height: 450px
+        font-size: 24px
+        max-height: 450px
+        span
+          writing-mode: horizontal-tb
     .wave
       position: absolute
       bottom: 0
 
-
+//land
 .land 
   background-image: url('../img/treasureland.png')
   width: 100%
@@ -216,19 +229,219 @@ header
   .goodperson-bottom
     padding-top: 14%
     color: $White
-    a
-      color: $blue
-      background-color: $White
-      border-radius: 30px
-      padding: 5px 10px
-      font-size: 20px
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+
+//guarding
+.guarding
+  padding-top: 7%
+  color: $main-color
+  background-image: url('../img/guarding.png')
+  width: 100%
+  background-size: contain    
+  background-position: center top
+  background-repeat: no-repeat
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 13%
+    right: 0
+    width: 25%
+    height: 38%
+    background-image: url('../img/tree01.png')
+    background-size: contain
+    background-repeat: no-repeat
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0%
+    left: 0
+    width: 22%
+    height: 29%
+    background-image: url('../img/tree02.png')
+    background-size: contain
+    background-repeat: no-repeat
+  h2
+    font-size: 32px
+  h1
+    font-size: 52px
+  .guarding-mid
+    padding: 4% 20px 12% 20px
+  .guarding-bottom
+    .text
+      padding-left: 15%
+    .line
+      margin: 5% 0
+      width: 100%
+      height: 60px
+      background-color: #c8bb9b
+    
+//urgency
+.urgency
+  position: relative
+  width: 100%
+  background-image: url('../img/urgency.png')
+  background-size: cover
+  background-repeat: no-repeat
+  // background-attachment: fixed
+  background-position: center 330px
+  min-height: 230vh
+  h1
+    color: $green
+    font-size: 52px
+  h2
+    font-size: 32px
+    color: $secondary
+  h3
+    font-size: 24px
+    color: $green
+    line-height: 1
+  p
+    color: $secondary
+  .info
+    .part
+      border-left: 5px solid $green
+      margin-top: 30px
+      width: 100%
+      padding-left: 15px
+    div
+      width: 38%
+    .pic
+      width: 24%
+      img
+        // height: 100%
+        object-fit: cover
+  .urgency-bottom 
+    padding-top: 10%
+    .text
+      padding-top: 50px
+      p
+        font-size: 24px
+        color: $White
+
+//design
+.design
+  margin: 60px 0 10px 0
+  h2
+    color: $main-color
+    font-size: 32px    
+  p
+    font-size: 24px
+    color: $White
+    line-height: 1.2
+  .design-bottom
+    background-image: url('../img/grass.png')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center bottom
+    padding-bottom: 12%
+    padding-top: 4%
+    .info
+      padding-top: 14%
+      .text
+        border-left: 5px solid $White
+        padding-left: 15px
+      .atag div
+        padding: 5px 0
+
+//life
+.life
+  h1
+    color: $main-color
+    font-size: 52px
+  h2
+    color: $main-color
+    font-size: 28px
+  .life-bg
+    margin-top: 2%
+    background-image: url('../img/life.png')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center bottom
+    padding-bottom: 12%
+    .text
+      padding: 0 41% 0 2%
+
+//crisis
+.crisis
+  background-image: url('../img/crisis.png')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  .triangle
+    display: flex
+    justify-content: center
+  h1
+    font-size: 90px
+    color: #e8e4d9
+    line-height: 1
+  h2
+    color: #e8e4d9
+    font-size: 36px
+    text-align: center
+  p
+    color: $green
+    font-size: 24px
+  .info
+    width: 100%
+    .box
+      background-color: #e8e4d9
+      margin: 20px 0
+      border-radius: 20px
+      padding: 20px 10px
+      text-align: center
+      min-height: 147px
+      display: flex
+      align-items: center
+      justify-content: center
 
 
+//分頁figures
+.figures
+  background-image: url('../img/figures.png')
+  width: 100%
+  background-size: cover    
+  background-position: center center
+  background-repeat: no-repeat
+  min-height: 200vh
+  h2
+    font-size: 44px
+    padding: 0 15px
+  h3
+    font-size: 32px
+    display: inline-block
+  h4
+    font-size: 26px
+    display: inline-block
+  p
+    font-size: 22px
+    line-height: 1.2
+  .info-text
+    text-align: center
+    color: $White
+    padding: 130px 15px 0 15px
+    .paragraph
+      .part
+        padding-bottom: 20px
+        .name
+          padding-bottom: 10px
+          .l-line
+            border-right: none
+            border-bottom: 5px solid $White
+
+.page-button
+  color: $White
+  font-size: 60px
+  text-decoration: underline solid $White
+  text-underline-offset: 8px
+  padding-top: 16%
 
 
 
 //RWD
+@media screen and (min-width: 1440px)
+  .urgency .urgency-bottom
+    .text
+      padding: 90px 0 230px 0
 @media screen and (min-width: 1200px)
   .land
     position: relative
@@ -247,11 +460,63 @@ header
           padding-left: 18%
     a
       padding: 10px 5px
+  .figures
+    position: relative
+    .info-text
+      writing-mode: vertical-rl
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      text-align: left
+      padding: 180px 0 0 0
+      .paragraph
+        padding: 0 20px
+        .part
+          padding: 0 6px
+          .name
+            .l-line
+              border-right: 5px solid $White
+              border-bottom: none
+        .t-line
+          border-top: 5px solid $White
+          padding-top: 5px
+    .page-button
+      position: absolute
+      bottom: 5%
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 9999
+  .urgency
+    background-position: center 220px
+    min-height: 295vh
+    .urgency-bottom
+      padding-top: 37%
+      .text
+        writing-mode: vertical-rl
+        padding: 90px 0 160px 0
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        text-align: left
+        padding-top: 5%
+    .urgency-more
+      position: absolute
+      bottom: 50px
+      left: 50%
+      transform: translateX(-50%)
+  .design
+    .design-bottom
+      .slogan
+        text-align: center
+        h2:first-child
+          padding-right: 55%
 
-  
+
+
 @media screen and (max-width: 991px)  
   .classynav ul > li > a
-    padding: 15px 10px
+    padding: 15px 7px
   .hero-section .hero-info
     min-height: 100vh
     .hero-text h1
@@ -270,6 +535,14 @@ header
       font-size: 42px
   .goodperson
     padding-bottom: 21%
+  .crisis
+    h1
+      font-size: 72px
+    .info .box
+      min-height: auto
+    .more
+      text-align: center
+
   
 @media screen and (max-width: 768px) 
   .classynav 
@@ -314,8 +587,26 @@ header
               color: $main-color
   .goodperson
     padding-bottom: 52%
+  .page-button
+    font-size: 40px
+  .figures
+    min-height: 180vh
+    margin-top: 0
+  .urgency
+    background-position: center 850px
+    .info 
+      div
+        width: 100%
+      .pic
+        width: 50%
+  .life .life-bg .text 
+    padding: 0 26% 0 2%
+
+
 
 @media screen and (max-width: 576px) 
+  .more a
+    font-size: 16px
   .hero-section .hero-info
     min-height: 75vh
     .hero-text h1
@@ -356,3 +647,41 @@ header
       font-size: 20px
     .goodperson-bottom
       padding-top: 24%
+  .figures
+    h2
+      font-size: 30px
+    h3
+      font-size: 24px
+    p
+      font-size: 20px
+  .guarding
+    h1
+      font-size: 40px
+    h2
+      font-size: 28px
+    &::before
+      top: 18%
+      width: 28%
+  .urgency 
+    background-position: center 815px
+    h1
+      font-size: 40px
+    h2
+      font-size: 28px
+    p
+      font-size: 20px !important
+  .design
+    h2
+      font-size: 28px
+    p
+      font-size: 20px
+  .life
+    h1
+      font-size: 40px
+    h2
+      font-size: 24px
+  .crisis
+    h1
+      font-size: 60px
+    .info .box
+      padding: 10px

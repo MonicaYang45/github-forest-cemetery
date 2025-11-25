@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>已故富豪與企業家家族</title>
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+</head>
+<body>
+    <header>
+        <nav class="classynav">
+            <div class="menu-toggle" id="menuToggle">&#9776;</div> 
+            <ul id="mainMenu">
+                <li class="nav-links"><a href="petition.html">樹葬請願認同卡</a></li>   
+                <li><a href="support-card.html">支持樹葬認同卡</a></li>
+                <li class="has-dropdown"><a href="#">我需要幫忙</a>
+                    <ul class="dropdown">
+                        <li><a href="#">向新北市長陳情</a></li>
+                        <li><a href="#">向新北市陳情立案</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">我想支持樹葬</a></li>
+                <li><a href="vision.html">願景藍圖</a></li>
+                <li><a href="join.html">成為共創者</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="figures ">
+        <div class="info-text">
+            <div class="paragraph">
+                <h2>已故富豪與企業家家族</h2>
+                <div class="part">
+                    <div class="name">
+                        <h3 class="l-line">王永慶祖父母</h3>
+                        <h4>王添泉夫婦</h4>
+                    </div>
+                    <p>台塑集團創辦人王永慶的祖父母於</p>
+                    <p>1958年葬於五股觀音山，墓地選在風水佳處，</p>
+                    <p>地理位置上享有淡水河、基隆河等明堂之利。</p>
+                </div>
+                <div class="part">
+                    <div class="name">
+                        <h3 class="l-line">王月蘭</h3>
+                        <h4>女士</h4>
+                    </div>
+                    <p>王永慶的元配王月蘭於過世後也葬於觀音山福園，與王家墓園相連。</p>
+                </div>
+                <div class="part">
+                    <div class="name">
+                        <h3 class="l-line">陳朝傳</h3>
+                        <h4>先生</h4>
+                    </div>
+                    <p>士林紙業與萬海航運重要創辦人，</p>
+                    <p>上榜亞洲富豪與福布斯台灣最有錢家族。</p>
+                </div>
+                <div class="part">
+                    <div class="name">
+                        <h3 class="l-line">林建生</h3>
+                        <h4>先生</h4>
+                    </div>
+                    <p>碾米業先驅、土地富商，三重幫奠基人之一。</p>
+                </div>
+            </div>
+            <div class="paragraph">
+                <h2>葬在觀音山墓區也包括</h2>
+                <div class="part t-line">
+                    <div>
+                        <h3>陳儀｜</h3>
+                        <p class="d-inline-block">台灣行政長官</p>
+                    </div>
+                    <div>
+                        <h3>吳鐵城｜</h3>
+                        <p class="d-inline-block">行政院副院長</p>
+                    </div>
+                    <div>
+                        <h3>田炯錦｜</h3>
+                        <p class="d-inline-block">司法院長</p>
+                    </div>
+                    <div>
+                        <h3>陳果夫、陳立夫｜</h3>
+                        <p class="d-inline-block">國民黨政要</p>
+                    </div>
+                </div>
+            </div>
+            <div class="paragraph">
+                <h4 class="px-lg-3">這些人與王家、吳火獅家族皆被提及埋葬在此地</h4>
+                <div class="t-line">
+                    <div class="part">
+                        <div>
+                            <h3>龍巖李世聰</h3>
+                        </div>
+                        <p>殯葬行業龍頭—龍巖集團創始人，2013年與龍巖密切關聯之墓園事業代表</p>
+                    </div>
+                    <div class="part">
+                        <div>
+                            <h3>唐君毅（1909–1978）</h3>
+                        </div>
+                        <p>著名新儒家哲學家、香港中文大學新亞書院創辦人之一，於1978年病逝後葬於新北市觀音山墓園。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-button text-center">
+            <a href="index.html">← 回上一頁</a>
+        </div>
+    </section>
+
+
+    <!-- header -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainMenu = document.getElementById('mainMenu');
+            const dropdownToggles = document.querySelectorAll('.classynav .has-dropdown > a');
+            const mobileBreakpoint = 768; 
+
+            menuToggle.addEventListener('click', function() {
+                mainMenu.classList.toggle('active'); 
+            });
+
+            dropdownToggles.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= mobileBreakpoint) {
+                        e.preventDefault(); 
+                        const parentLi = link.closest('li');
+                        parentLi.classList.toggle('dropdown-open');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
