@@ -99,14 +99,8 @@ input, button, select, textarea {
   text-align: center;
 }
 
-.hidden {
-  display: none !important;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+.text-right {
+  text-align: right;
 }
 
 body {
@@ -137,6 +131,10 @@ header {
   padding: 5px 10px;
   font-size: 20px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.more a:hover {
+  background-color: #243962;
+  color: #ffffff;
 }
 
 .classynav .menu-toggle {
@@ -290,6 +288,10 @@ header {
   padding: 5px 10px;
   font-size: 18px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.land a:hover {
+  background-color: #243962;
+  color: #ffffff;
 }
 
 .framework {
@@ -565,6 +567,74 @@ header {
   justify-content: center;
 }
 
+.longtails {
+  margin: 5%;
+}
+.longtails h1 {
+  font-size: 52px;
+  color: #604c3f;
+}
+.longtails p {
+  font-size: 24px;
+  color: #604c3f;
+}
+.longtails img {
+  margin: 5% 0;
+}
+
+.solution {
+  background-image: url("../img/solution.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #243962;
+  padding: 2% 0 10% 0;
+}
+.solution h1 {
+  font-size: 52px;
+}
+.solution h2 {
+  font-size: 32px;
+}
+.solution p {
+  font-size: 24px;
+}
+.solution .p-text {
+  padding: 8% 0 10% 0;
+}
+.solution .box {
+  border: 1px solid #604c3f;
+  margin: 0 14%;
+  padding: 20px;
+}
+
+.envelope {
+  background-image: url("../img/envelope-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+  min-height: 200vh;
+}
+.envelope .info {
+  position: relative;
+}
+.envelope .info .envelope-more {
+  position: absolute;
+  bottom: 70px;
+  right: 150px;
+}
+.envelope .slogan {
+  padding: 8% 0;
+}
+.envelope .bottom-line {
+  position: absolute;
+  bottom: 0;
+  background-color: #243962;
+  width: 100%;
+  height: 80px;
+}
+
 .figures {
   background-image: url("../img/figures.png");
   width: 100%;
@@ -704,6 +774,16 @@ header {
   .design .design-bottom .slogan h2:first-child {
     padding-right: 55%;
   }
+  .solution {
+    padding: 2% 0 26% 0;
+  }
+  .solution .p-text {
+    text-align: right;
+  }
+  .envelope {
+    margin-top: -20%;
+    min-height: 280vh;
+  }
 }
 @media screen and (max-width: 991px) {
   .classynav ul > li > a {
@@ -791,6 +871,9 @@ header {
   .classynav ul > li a {
     color: #604c3f;
   }
+  .hero-section .hero-info .hero-text {
+    padding: 26% 13% 0;
+  }
   .goodperson {
     padding-bottom: 52%;
   }
@@ -812,6 +895,22 @@ header {
   }
   .life .life-bg .text {
     padding: 0 26% 0 2%;
+  }
+  .solution .info img {
+    max-width: 120%;
+  }
+  .solution .box {
+    margin: 0;
+  }
+  .envelope {
+    min-height: 160vh;
+  }
+  .envelope .info .envelope-more {
+    bottom: 40px;
+    right: 100px;
+  }
+  .envelope .info .envelope-more a {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -919,5 +1018,26 @@ header {
   }
   .crisis .info .box {
     padding: 10px;
+  }
+  .longtails h1 {
+    font-size: 40px;
+  }
+  .longtails p {
+    font-size: 20px;
+  }
+  .solution h1 {
+    font-size: 40px;
+  }
+  .solution h2 {
+    font-size: 24px;
+  }
+  .solution p {
+    font-size: 20px;
+  }
+  .envelope {
+    min-height: 115vh;
+  }
+  .envelope .bottom-line {
+    height: 40px;
   }
 }/*# sourceMappingURL=all.css.map */

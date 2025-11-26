@@ -99,12 +99,6 @@ input, button, select, textarea {
   text-align: center;
 }
 
-.hidden {
-  display: none !important;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+.text-right {
+  text-align: right;
 }/*# sourceMappingURL=tool.css.map */

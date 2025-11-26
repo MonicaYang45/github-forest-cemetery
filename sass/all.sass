@@ -17,7 +17,7 @@ header
 .hero-header
   position: relative
 
-//
+//more button
 .more a
   color: $blue
   background-color: $White
@@ -25,6 +25,9 @@ header
   padding: 5px 10px
   font-size: 20px
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+  &:hover
+    background-color: $blue
+    color: $White
 
 
 //Nav
@@ -163,6 +166,9 @@ header
     padding: 5px 10px
     font-size: 18px
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+    &:hover
+      background-color: $blue
+      color: $White
 
 
 //framework
@@ -394,6 +400,62 @@ header
       align-items: center
       justify-content: center
 
+//longtails
+.longtails
+  margin: 5%
+  h1
+    font-size: 52px
+    color: $main-color
+  p
+    font-size: 24px
+    color: $main-color
+  img
+    margin: 5% 0
+
+//solution
+.solution
+  background-image: url('../img/solution.png')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center top
+  color: $blue
+  padding: 2% 0 10% 0
+  h1
+    font-size: 52px
+  h2
+    font-size: 32px
+  p
+    font-size: 24px
+  .p-text
+    padding: 8% 0 10% 0
+  .box
+    border: 1px solid $main-color
+    margin: 0 14%
+    padding: 20px
+
+//envelope
+.envelope
+  background-image: url('../img/envelope-bg.png')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center top
+  position: relative
+  min-height: 200vh
+  .info
+    position: relative
+    .envelope-more
+      position: absolute
+      bottom: 70px
+      right: 150px
+  .slogan
+    padding: 8% 0
+  .bottom-line
+    position: absolute
+    bottom: 0
+    background-color: $blue
+    width: 100%
+    height: 80px
+
 
 //分頁figures
 .figures
@@ -511,6 +573,14 @@ header
         text-align: center
         h2:first-child
           padding-right: 55%
+  .solution
+    padding: 2% 0 26% 0
+    .p-text
+      text-align: right
+  .envelope
+    margin-top: -20%
+    min-height: 280vh
+
 
 
 
@@ -585,6 +655,8 @@ header
                   visibility: visible
             a
               color: $main-color
+  .hero-section .hero-info .hero-text
+    padding: 26% 13% 0
   .goodperson
     padding-bottom: 52%
   .page-button
@@ -601,8 +673,19 @@ header
         width: 50%
   .life .life-bg .text 
     padding: 0 26% 0 2%
-
-
+  .solution 
+    .info img
+      max-width: 120%
+    .box
+      margin: 0
+  .envelope
+    min-height: 160vh
+    .info 
+      .envelope-more
+        bottom: 40px
+        right: 100px
+        a
+          font-size: 12px
 
 @media screen and (max-width: 576px) 
   .more a
@@ -685,3 +768,19 @@ header
       font-size: 60px
     .info .box
       padding: 10px
+  .longtails
+    h1
+      font-size: 40px
+    p
+      font-size: 20px
+  .solution
+    h1
+      font-size: 40px
+    h2
+      font-size: 24px
+    p
+      font-size: 20px
+  .envelope
+    min-height: 115vh
+    .bottom-line
+      height: 40px
