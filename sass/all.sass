@@ -101,7 +101,7 @@ header
     justify-content: center
     text-align: center
     .hero-text
-      padding:5% 13% 0
+      padding:5% 10% 0
       h1
         line-height: 1.3
         font-size: 52px
@@ -148,17 +148,19 @@ header
   background-size: cover    
   background-position: center top
   background-repeat: no-repeat
-  min-height: 169vh
+  min-height: 172vh
   .land-text
     color: $White
     padding: 20px 15px
     text-align: center
   h2
     font-size: 44px
+    line-height: 1
   h3
     font-size: 28px
   p
     font-size: 24px
+    line-height: 1.2
   a
     color: $blue
     background-color: $White
@@ -219,9 +221,11 @@ header
         border-radius: 30px
         padding: 20px
       .info-text
-        padding: 30px 5% 0 0
+        padding-top: 30px
         h2 
           color: #dd0000
+        p
+          color: $main-color
     .goodperson-title
       width: 15%
       writing-mode: vertical-rl
@@ -235,6 +239,13 @@ header
   .goodperson-bottom
     padding-top: 14%
     color: $White
+
+//triangle-bg
+.guarding-triangle , .land-triangle
+  display: flex
+  justify-content: center
+  margin-top: -1px
+
 
 //guarding
 .guarding
@@ -290,7 +301,7 @@ header
   background-repeat: no-repeat
   // background-attachment: fixed
   background-position: center 330px
-  min-height: 230vh
+  // min-height: 230vh
   h1
     color: $green
     font-size: 52px
@@ -323,6 +334,9 @@ header
       p
         font-size: 24px
         color: $White
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8)
+      span
+        writing-mode: horizontal-tb
 
 //design
 .design
@@ -376,6 +390,7 @@ header
   .triangle
     display: flex
     justify-content: center
+    margin-top: -1px
   h1
     font-size: 90px
     color: #e8e4d9
@@ -457,7 +472,26 @@ header
     height: 80px
 
 
-//分頁figures
+
+//分頁
+.page-box
+  padding: 20px
+  background-color: $White
+  border-radius: 30px
+
+.page-button
+  color: $White
+  font-size: 60px
+  text-decoration: underline solid $White
+  text-underline-offset: 8px
+  padding-top: 16%
+  padding-bottom: 40px
+  a
+    &:hover
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8)
+
+
+//figures
 .figures
   background-image: url('../img/figures.png')
   width: 100%
@@ -490,16 +524,65 @@ header
             border-right: none
             border-bottom: 5px solid $White
 
-.page-button
-  color: $White
-  font-size: 60px
-  text-decoration: underline solid $White
-  text-underline-offset: 8px
+//data
+.data
+  background-image: url('../img/data.png')
+  width: 100%
+  background-size: cover    
+  background-position: center bottom
+  background-repeat: no-repeat
+  // min-height: 200vh
+  padding-top: 9%
+  .info
+    margin: 40px 0
+    .w-40
+      width: 40%
+    .w-60
+      width: 60%
+
+//report
+.report
+  background-image: url('../img/report.png')
+  width: 100%
+  background-size: cover    
+  background-position: center bottom
+  background-repeat: no-repeat
   padding-top: 16%
+  .text
+    color: $White
+    font-size: 36px
+    text-align: center
+    padding-top: 10%
+
+//mortality
+.mortality
+  background-image: url('../img/mortality.png')
+  width: 100%
+  background-size: cover    
+  background-position: center bottom
+  background-repeat: no-repeat
+  padding-top: 12%
+  p
+    color: $blue
+    font-size: 22px
+  .page-box
+    background-image: url('../img/mortalitybg.png')
+    width: 100%
+    background-size: cover    
+    background-position: center bottom
+    background-repeat: no-repeat
+    padding: 7% 7% 10% 7%
+    .text
+      padding-bottom: 5%
+    .pic
+      padding: 3%
+      div
+        margin: 10px
 
 
 
-//RWD
+
+//RWD 寬
 @media screen and (min-width: 1440px)
   .urgency .urgency-bottom
     .text
@@ -515,13 +598,16 @@ header
       transform: translateX(-50%)
       text-align: left
       .land-title
-        padding: 40px 0 0 60px
+        padding: 40px 0 0 30px
       .land-info
-        padding: 65px 0 500px 0
+        padding: 65px 0 200px 0
         .land-paragraph
-          padding-left: 18%
+          padding-left: 9.5%
     a
       padding: 10px 5px
+    p
+      span
+        writing-mode: horizontal-tb 
   .figures
     position: relative
     .info-text
@@ -556,7 +642,7 @@ header
       padding-top: 37%
       .text
         writing-mode: vertical-rl
-        padding: 90px 0 160px 0
+        padding: 90px 0 140px 0
         position: absolute
         left: 50%
         transform: translateX(-50%)
@@ -580,7 +666,8 @@ header
   .envelope
     margin-top: -20%
     min-height: 280vh
-
+  .report
+      padding-top: 9%
 
 
 
@@ -603,8 +690,10 @@ header
       font-size: 32px
     h1
       font-size: 42px
+      line-height: 1.1
+      padding: 10px 0
   .goodperson
-    padding-bottom: 21%
+    padding-bottom: 28%
   .crisis
     h1
       font-size: 72px
@@ -612,7 +701,11 @@ header
       min-height: auto
     .more
       text-align: center
-
+  .data .info 
+    .w-40 , .w-60
+      width: 100%
+  .mortality
+    padding-top: 16%
   
 @media screen and (max-width: 768px) 
   .classynav 
@@ -657,8 +750,10 @@ header
               color: $main-color
   .hero-section .hero-info .hero-text
     padding: 26% 13% 0
+  .land
+    min-height: 180vh
   .goodperson
-    padding-bottom: 52%
+    padding-bottom: 33%
   .page-button
     font-size: 40px
   .figures
@@ -686,6 +781,8 @@ header
         right: 100px
         a
           font-size: 12px
+  .mortality
+    padding-top: 28%
 
 @media screen and (max-width: 576px) 
   .more a
@@ -729,7 +826,7 @@ header
     p
       font-size: 20px
     .goodperson-bottom
-      padding-top: 24%
+      padding-top: 30%
   .figures
     h2
       font-size: 30px
@@ -765,7 +862,7 @@ header
       font-size: 24px
   .crisis
     h1
-      font-size: 60px
+      font-size: 52px
     .info .box
       padding: 10px
   .longtails
@@ -784,3 +881,26 @@ header
     min-height: 115vh
     .bottom-line
       height: 40px
+  .data
+    padding-top: 15%
+  .report
+    padding-top: 23%
+    .text h2
+      font-size: 24px
+  .mortality p
+    font-size: 20px
+
+@media screen and (max-width: 440px) 
+  .land
+    min-height: 200vh
+  .goodperson
+    padding-bottom: 56%
+
+
+
+//RWD 高
+@media screen and (min-width: 1200px) and (max-height: 700px)
+  .urgency 
+    min-height: 365vh
+    .urgency-bottom .text
+      writing-mode: horizontal-tb

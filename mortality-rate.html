@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣死亡概況推估</title>
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+</head>
+<body>
+    <header>
+        <nav class="classynav">
+            <div class="menu-toggle" id="menuToggle">&#9776;</div> 
+            <ul id="mainMenu">
+                <li class="nav-links"><a href="petition.html">樹葬請願認同卡</a></li>   
+                <li><a href="support-card.html">支持樹葬認同卡</a></li>
+                <li class="has-dropdown"><a href="#">我需要幫忙</a>
+                    <ul class="dropdown">
+                        <li><a href="#">向新北市長陳情</a></li>
+                        <li><a href="#">向新北市陳情立案</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">我想支持樹葬</a></li>
+                <li><a href="vision.html">願景藍圖</a></li>
+                <li><a href="join.html">成為共創者</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="mortality">
+        <div class="container">
+            <div class="info">
+                <div class="page-box">
+                    <div class="text">
+                        <p>隨著明年2025年邁入超高齡社會，死亡率逐年攀升，殯葬設施的需求也將逐年增加，然而，不論是火化納骨或入土安葬或殮入家族詞，在台灣各地安居與安葬間的角力，也成了「人生終章」的另一個難題。</p>
+                        <p>面對新北市逐年增加的死亡數已成「人生終章」新難題。</p>
+                        <p>然而節葬.簡葬.樹葬將是最好的解決方法猶如政府在30年前力推火化取代土葬打破土葬封建觀念的好契機。</p>
+                        <p>森林生態與實現生命公園一體，森林公墓樹葬場域，案名：五股觀音山賴慶霖公墓用地</p>
+                    </div>
+                    <div class="d-lg-flex pic">
+                        <div>
+                            <img src="./img/m01.png" alt="">
+                        </div>
+                        <div>
+                            <img src="./img/m02.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="page-button text-center">
+                <a href="index.html">← 回上一頁</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- header -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainMenu = document.getElementById('mainMenu');
+            const dropdownToggles = document.querySelectorAll('.classynav .has-dropdown > a');
+            const mobileBreakpoint = 768; 
+
+            menuToggle.addEventListener('click', function() {
+                mainMenu.classList.toggle('active'); 
+            });
+
+            dropdownToggles.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= mobileBreakpoint) {
+                        e.preventDefault(); 
+                        const parentLi = link.closest('li');
+                        parentLi.classList.toggle('dropdown-open');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
