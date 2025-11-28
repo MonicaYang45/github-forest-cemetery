@@ -110,7 +110,7 @@ header
 
 //area
 .area
-  background-image: url('../img/tree.png')
+  background-image: url('../img/tree.webp')
   position: relative
   width: 100%
   background-size: cover     
@@ -143,7 +143,7 @@ header
 
 //land
 .land 
-  background-image: url('../img/treasureland.png')
+  background-image: url('../img/treasureland.webp')
   width: 100%
   background-size: cover    
   background-position: center top
@@ -203,7 +203,7 @@ header
 
 //goodperson
 .goodperson
-  background-image: url('../img/goodperson.png')
+  background-image: url('../img/goodperson.webp')
   width: 100%
   background-size: cover    
   background-position: center bottom
@@ -296,7 +296,7 @@ header
 .urgency
   position: relative
   width: 100%
-  background-image: url('../img/urgency.png')
+  background-image: url('../img/urgency.webp')
   background-size: cover
   background-repeat: no-repeat
   // background-attachment: fixed
@@ -349,7 +349,7 @@ header
     color: $White
     line-height: 1.2
   .design-bottom
-    background-image: url('../img/grass.png')
+    background-image: url('../img/grass.webp')
     background-size: cover
     background-repeat: no-repeat
     background-position: center bottom
@@ -373,7 +373,7 @@ header
     font-size: 28px
   .life-bg
     margin-top: 2%
-    background-image: url('../img/life.png')
+    background-image: url('../img/life.webp')
     background-size: cover
     background-repeat: no-repeat
     background-position: center bottom
@@ -383,7 +383,7 @@ header
 
 //crisis
 .crisis
-  background-image: url('../img/crisis.png')
+  background-image: url('../img/crisis.webp')
   background-size: cover
   background-repeat: no-repeat
   background-position: center center
@@ -429,7 +429,7 @@ header
 
 //solution
 .solution
-  background-image: url('../img/solution.png')
+  background-image: url('../img/solution.webp')
   background-size: cover
   background-repeat: no-repeat
   background-position: center top
@@ -450,7 +450,7 @@ header
 
 //envelope
 .envelope
-  background-image: url('../img/envelope-bg.png')
+  background-image: url('../img/envelope-bg.webp')
   background-size: cover
   background-repeat: no-repeat
   background-position: center top
@@ -476,8 +476,11 @@ header
 //分頁
 .page-box
   padding: 20px
-  background-color: $White
+  background-color:  rgb(255 255 255 / 90%) 
   border-radius: 30px
+
+.page-top 
+  padding-top: 170px
 
 .page-button
   color: $White
@@ -493,7 +496,7 @@ header
 
 //figures
 .figures
-  background-image: url('../img/figures.png')
+  background-image: url('../img/figures.webp')
   width: 100%
   background-size: cover    
   background-position: center center
@@ -526,15 +529,15 @@ header
 
 //data
 .data
-  background-image: url('../img/data.png')
+  background-image: url('../img/data.webp')
   width: 100%
   background-size: cover    
   background-position: center bottom
   background-repeat: no-repeat
-  // min-height: 200vh
-  padding-top: 9%
   .info
-    margin: 40px 0
+    margin-bottom: 40px
+    img
+      mix-blend-mode: multiply
     .w-40
       width: 40%
     .w-60
@@ -542,12 +545,11 @@ header
 
 //report
 .report
-  background-image: url('../img/report.png')
+  background-image: url('../img/report.webp')
   width: 100%
   background-size: cover    
   background-position: center bottom
   background-repeat: no-repeat
-  padding-top: 16%
   .text
     color: $White
     font-size: 36px
@@ -556,20 +558,19 @@ header
 
 //mortality
 .mortality
-  background-image: url('../img/mortality.png')
+  background-image: url('../img/mortality.webp')
   width: 100%
   background-size: cover    
   background-position: center bottom
   background-repeat: no-repeat
-  padding-top: 12%
   p
     color: $blue
     font-size: 22px
   .page-box
-    background-image: url('../img/mortalitybg.png')
+    background-image: url('../img/mortalitybg.webp')
     width: 100%
     background-size: cover    
-    background-position: center bottom
+    background-position: center top
     background-repeat: no-repeat
     padding: 7% 7% 10% 7%
     .text
@@ -579,8 +580,84 @@ header
       div
         margin: 10px
 
+//crisis  
+.page-crisis
+  background-image: url('../img/page-crisis.webp')
+  width: 100%
+  background-size: cover    
+  background-position: center top
+  background-repeat: no-repeat
+  h1
+    font-size: 72px
+    color: $blue
+    text-align: center
+    line-height: 1.2
+  .info
+    margin-bottom: 40px
+    .page-box
+      padding: 3%
 
+//more-data
+.more-data
+  background-image: url('../img/moredata.webp')
+  width: 100%
+  background-size: cover    
+  background-position: center top
+  background-repeat: no-repeat
+  p
+    color: $blue
+    font-size: 24px
+  .info
+    margin-bottom: 40px
+    .page-box
+      padding: 0
+      .pc-pic 
+        width: 30%
+        img
+          border-radius: 30px 0 0 30px
+      .text
+        width: 70%
+        padding: 40px 40px 0 40px
+  .info-bottom
+    h1
+      text-align: center
+      font-size: 42px
+      color: $blue
+      line-height: 1.1
+      span
+        color: #c20d23
+        font-size: 62px
+    img
+      padding: 20px 0
+  
+//plan
+.plan
+  background-image: url('../img/plan.webp')
+  width: 100%
+  background-size: cover    
+  background-position: center top
+  background-repeat: no-repeat
+  .text
+    color: $White
+    font-size: 36px
+    text-align: center
+    padding-top: 10%
 
+//climate
+.climate
+  background-image: url('../img/climate.webp')
+  width: 100%
+  background-size: cover    
+  background-position: center bottom
+  background-repeat: no-repeat
+
+//suggestions
+.suggestions
+  background-image: url('../img/suggestions.webp')
+  width: 100%
+  background-size: cover    
+  background-position: center bottom
+  background-repeat: no-repeat
 
 //RWD 寬
 @media screen and (min-width: 1440px)
@@ -666,8 +743,7 @@ header
   .envelope
     margin-top: -20%
     min-height: 280vh
-  .report
-      padding-top: 9%
+
 
 
 
@@ -704,9 +780,23 @@ header
   .data .info 
     .w-40 , .w-60
       width: 100%
-  .mortality
-    padding-top: 16%
+  .page-crisis h1
+    font-size: 52px
+  .more-data
+    .info
+      .page-box
+        .pc-pic 
+          width: 100%
+        .m-pic
+          img
+            border-radius: 30px 30px 0 0
+        .text
+          width: 100%
+          padding: 20px
   
+
+
+
 @media screen and (max-width: 768px) 
   .classynav 
     background-color: #e8e4d9
@@ -781,8 +871,10 @@ header
         right: 100px
         a
           font-size: 12px
-  .mortality
-    padding-top: 28%
+  .page-top
+    padding-top: 130px
+
+
 
 @media screen and (max-width: 576px) 
   .more a
@@ -881,14 +973,19 @@ header
     min-height: 115vh
     .bottom-line
       height: 40px
-  .data
-    padding-top: 15%
-  .report
-    padding-top: 23%
     .text h2
       font-size: 24px
   .mortality p
     font-size: 20px
+  .page-crisis h1
+    font-size: 40px
+  .more-data
+    p
+      font-size: 20px
+    .info-bottom h1
+      font-size: 32px
+      span
+        font-size: 38px
 
 @media screen and (max-width: 440px) 
   .land

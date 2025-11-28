@@ -223,7 +223,7 @@ header {
 }
 
 .area {
-  background-image: url("../img/tree.png");
+  background-image: url("../img/tree.webp");
   position: relative;
   width: 100%;
   background-size: cover;
@@ -260,7 +260,7 @@ header {
 }
 
 .land {
-  background-image: url("../img/treasureland.png");
+  background-image: url("../img/treasureland.webp");
   width: 100%;
   background-size: cover;
   background-position: center top;
@@ -331,7 +331,7 @@ header {
 }
 
 .goodperson {
-  background-image: url("../img/goodperson.png");
+  background-image: url("../img/goodperson.webp");
   width: 100%;
   background-size: cover;
   background-position: center bottom;
@@ -439,7 +439,7 @@ header {
 .urgency {
   position: relative;
   width: 100%;
-  background-image: url("../img/urgency.png");
+  background-image: url("../img/urgency.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 330px;
@@ -504,7 +504,7 @@ header {
   line-height: 1.2;
 }
 .design .design-bottom {
-  background-image: url("../img/grass.png");
+  background-image: url("../img/grass.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -532,7 +532,7 @@ header {
 }
 .life .life-bg {
   margin-top: 2%;
-  background-image: url("../img/life.png");
+  background-image: url("../img/life.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -543,7 +543,7 @@ header {
 }
 
 .crisis {
-  background-image: url("../img/crisis.png");
+  background-image: url("../img/crisis.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -598,7 +598,7 @@ header {
 }
 
 .solution {
-  background-image: url("../img/solution.png");
+  background-image: url("../img/solution.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -624,7 +624,7 @@ header {
 }
 
 .envelope {
-  background-image: url("../img/envelope-bg.png");
+  background-image: url("../img/envelope-bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -652,8 +652,12 @@ header {
 
 .page-box {
   padding: 20px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 30px;
+}
+
+.page-top {
+  padding-top: 170px;
 }
 
 .page-button {
@@ -670,7 +674,7 @@ header {
 }
 
 .figures {
-  background-image: url("../img/figures.png");
+  background-image: url("../img/figures.webp");
   width: 100%;
   background-size: cover;
   background-position: center center;
@@ -710,15 +714,17 @@ header {
 }
 
 .data {
-  background-image: url("../img/data.png");
+  background-image: url("../img/data.webp");
   width: 100%;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  padding-top: 9%;
 }
 .data .info {
-  margin: 40px 0;
+  margin-bottom: 40px;
+}
+.data .info img {
+  mix-blend-mode: multiply;
 }
 .data .info .w-40 {
   width: 40%;
@@ -728,12 +734,11 @@ header {
 }
 
 .report {
-  background-image: url("../img/report.png");
+  background-image: url("../img/report.webp");
   width: 100%;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  padding-top: 16%;
 }
 .report .text {
   color: #ffffff;
@@ -743,22 +748,21 @@ header {
 }
 
 .mortality {
-  background-image: url("../img/mortality.png");
+  background-image: url("../img/mortality.webp");
   width: 100%;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  padding-top: 12%;
 }
 .mortality p {
   color: #243962;
   font-size: 22px;
 }
 .mortality .page-box {
-  background-image: url("../img/mortalitybg.png");
+  background-image: url("../img/mortalitybg.webp");
   width: 100%;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center top;
   background-repeat: no-repeat;
   padding: 7% 7% 10% 7%;
 }
@@ -770,6 +774,97 @@ header {
 }
 .mortality .page-box .pic div {
   margin: 10px;
+}
+
+.page-crisis {
+  background-image: url("../img/page-crisis.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.page-crisis h1 {
+  font-size: 72px;
+  color: #243962;
+  text-align: center;
+  line-height: 1.2;
+}
+.page-crisis .info {
+  margin-bottom: 40px;
+}
+.page-crisis .info .page-box {
+  padding: 3%;
+}
+
+.more-data {
+  background-image: url("../img/moredata.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.more-data p {
+  color: #243962;
+  font-size: 24px;
+}
+.more-data .info {
+  margin-bottom: 40px;
+}
+.more-data .info .page-box {
+  padding: 0;
+}
+.more-data .info .page-box .pc-pic {
+  width: 30%;
+}
+.more-data .info .page-box .pc-pic img {
+  border-radius: 30px 0 0 30px;
+}
+.more-data .info .page-box .text {
+  width: 70%;
+  padding: 40px 40px 0 40px;
+}
+.more-data .info-bottom h1 {
+  text-align: center;
+  font-size: 42px;
+  color: #243962;
+  line-height: 1.1;
+}
+.more-data .info-bottom h1 span {
+  color: #c20d23;
+  font-size: 62px;
+}
+.more-data .info-bottom img {
+  padding: 20px 0;
+}
+
+.plan {
+  background-image: url("../img/plan.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.plan .text {
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.climate {
+  background-image: url("../img/climate.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.suggestions {
+  background-image: url("../img/suggestions.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 1440px) {
@@ -875,9 +970,6 @@ header {
     margin-top: -20%;
     min-height: 280vh;
   }
-  .report {
-    padding-top: 9%;
-  }
 }
 @media screen and (max-width: 991px) {
   .classynav ul > li > a {
@@ -921,8 +1013,18 @@ header {
   .data .info .w-40, .data .info .w-60 {
     width: 100%;
   }
-  .mortality {
-    padding-top: 16%;
+  .page-crisis h1 {
+    font-size: 52px;
+  }
+  .more-data .info .page-box .pc-pic {
+    width: 100%;
+  }
+  .more-data .info .page-box .m-pic img {
+    border-radius: 30px 30px 0 0;
+  }
+  .more-data .info .page-box .text {
+    width: 100%;
+    padding: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1017,8 +1119,8 @@ header {
   .envelope .info .envelope-more a {
     font-size: 12px;
   }
-  .mortality {
-    padding-top: 28%;
+  .page-top {
+    padding-top: 130px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1148,17 +1250,23 @@ header {
   .envelope .bottom-line {
     height: 40px;
   }
-  .data {
-    padding-top: 15%;
-  }
-  .report {
-    padding-top: 23%;
-  }
-  .report .text h2 {
+  .envelope .text h2 {
     font-size: 24px;
   }
   .mortality p {
     font-size: 20px;
+  }
+  .page-crisis h1 {
+    font-size: 40px;
+  }
+  .more-data p {
+    font-size: 20px;
+  }
+  .more-data .info-bottom h1 {
+    font-size: 32px;
+  }
+  .more-data .info-bottom h1 span {
+    font-size: 38px;
   }
 }
 @media screen and (max-width: 440px) {
