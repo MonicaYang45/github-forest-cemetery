@@ -800,7 +800,7 @@ header {
   background-image: url("../img/moredata.webp");
   width: 100%;
   background-size: cover;
-  background-position: center top;
+  background-position: center bottom;
   background-repeat: no-repeat;
 }
 .more-data p {
@@ -865,6 +865,169 @@ header {
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+
+.join {
+  background-image: url("../img/join.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.join .title {
+  color: #243962;
+  -webkit-text-stroke: 8px #e8e4db;
+  paint-order: stroke fill;
+  -webkit-text-fill-color: #243962;
+}
+.join .title h1 {
+  font-size: 72px;
+}
+.join .title h2 {
+  font-size: 52px;
+}
+.join .a-tag {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.join .a-tag a {
+  display: block;
+  background-color: #e8e4db;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 32px;
+  color: #3c3736;
+  border-radius: 50px;
+  padding: 12px 30px;
+  box-shadow: inset 0 0 0 2px #d3bea4, 0 6px 1px #7a6a56, 0 8px 15px rgba(0, 0, 0, 0.5);
+  border: 8px solid #e8e4db;
+  position: relative;
+  transition: all 0.15s ease-out;
+}
+.join .a-tag a:nth-child(2) {
+  margin-left: 15%;
+}
+.join .a-tag a:nth-child(3) {
+  margin-left: 30%;
+}
+.join .a-tag a::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/touch.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: -35px;
+  bottom: -35px;
+}
+.join .a-tag a:hover {
+  box-shadow: inset 0 0 0 2px #d3bea4, 0 3px 1px #7a6a56, 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(3px);
+}
+.join .a-tag a:hover::after {
+  transform: translate(0px, 3px);
+}
+.join .pic {
+  margin-top: -5%;
+}
+
+.vision {
+  background-image: url("../img/vision.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.petition {
+  background-image: url("../img/petition.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.petition .top {
+  background-image: url("../img/petition-top.webp");
+  width: 100%;
+  background-size: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 11%;
+}
+.petition .top .text {
+  padding-top: 130px;
+  text-align: center;
+  color: #ffffff;
+}
+.petition .top .text h1 {
+  font-size: 52px;
+}
+.petition .top .text h2 {
+  font-size: 32px;
+}
+.petition .mid .text {
+  text-align: center;
+  padding-top: 5%;
+}
+.petition .mid .text h3 {
+  font-size: 28px;
+  color: #292e21;
+}
+.petition .mid .text p {
+  font-size: 20px;
+  color: #c50018;
+}
+.petition .mid .pic {
+  border-top: 2px solid #171b15;
+  padding: 30px 0;
+}
+.petition .mid .referendum-pic {
+  position: relative;
+}
+.petition .mid .referendum-pic .referendum-atag {
+  width: 20%;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.15s ease-out;
+}
+.petition .mid .referendum-pic .referendum-atag:hover {
+  width: 22%;
+}
+.petition .mid .a-tag {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.petition .mid .a-tag a {
+  display: block;
+  background-color: #e8e4db;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 32px;
+  color: #3c3736;
+  border-radius: 50px;
+  padding: 12px 30px;
+  box-shadow: inset 0 0 0 2px #d3bea4, 0 6px 1px #7a6a56, 0 8px 15px rgba(0, 0, 0, 0.5);
+  border: 8px solid #e8e4db;
+  transition: all 0.15s ease-out;
+}
+.petition .mid .a-tag a:hover {
+  box-shadow: inset 0 0 0 2px #d3bea4, 0 3px 1px #7a6a56, 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(3px);
+}
+.petition .bottom {
+  background-image: url("../img/petition-bottom.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 2%;
 }
 
 @media screen and (min-width: 1440px) {
@@ -1026,6 +1189,12 @@ header {
     width: 100%;
     padding: 20px;
   }
+  .petition .top {
+    padding-bottom: 13%;
+  }
+  .petition .top .text {
+    padding-top: 100px;
+  }
 }
 @media screen and (max-width: 768px) {
   .classynav {
@@ -1121,6 +1290,32 @@ header {
   }
   .page-top {
     padding-top: 130px;
+  }
+  .join .a-tag a {
+    font-size: 24px;
+    margin: 16px 0;
+    padding: 8px 30px;
+  }
+  .join .title h1 {
+    font-size: 62px;
+  }
+  .join .title h2 {
+    font-size: 42px;
+  }
+  .petition .top {
+    padding-bottom: 19%;
+  }
+  .petition .top .text h1 {
+    font-size: 32px;
+  }
+  .petition .top .text h2 {
+    line-height: 1.1;
+    font-size: 24px;
+  }
+  .petition .mid .a-tag a {
+    font-size: 24px;
+    margin: 16px 0;
+    padding: 8px 30px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1267,6 +1462,51 @@ header {
   }
   .more-data .info-bottom h1 span {
     font-size: 38px;
+  }
+  .join .title h1 {
+    font-size: 48px;
+  }
+  .join .a-tag a {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+  .join .a-tag a:nth-child(1) {
+    margin-right: 5%;
+  }
+  .join .a-tag a:nth-child(2) {
+    margin-left: 10%;
+  }
+  .join .a-tag a:nth-child(3) {
+    margin-left: 25%;
+  }
+  .join .a-tag a::after {
+    width: 60px;
+    height: 60px;
+    bottom: -30px;
+    right: -10px;
+  }
+  .petition .top {
+    padding-bottom: 20%;
+  }
+  .petition .top .text {
+    padding-top: 90px;
+  }
+  .petition .top .text h1 {
+    font-size: 24px;
+  }
+  .petition .top .text h2 {
+    font-size: 18px;
+  }
+  .petition .top .text p {
+    line-height: 1;
+    font-size: 14px;
+  }
+  .petition .mid .a-tag a {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+  .petition .mid .text h3 {
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 440px) {

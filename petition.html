@@ -4,8 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>樹葬請願認同卡</title>
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
 </head>
 <body>
-    <h1>樹葬請願認同卡</h1>
+    <header>
+        <nav class="classynav">
+            <div class="menu-toggle" id="menuToggle">&#9776;</div> 
+            <ul id="mainMenu">
+                <li class="nav-links"><a href="petition.html">樹葬請願認同卡</a></li>   
+                <li><a href="support-card.html">支持樹葬認同卡</a></li>
+                <li class="has-dropdown"><a href="#">我需要幫忙</a>
+                    <ul class="dropdown">
+                        <li><a href="#">向新北市長陳情</a></li>
+                        <li><a href="#">向新北市陳情立案</a></li>
+                    </ul>
+                </li>
+                <li><a href="support.html">我想支持樹葬</a></li>
+                <li><a href="vision.html">願景藍圖</a></li>
+                <li><a href="join.html">成為共創者</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="petition">
+        <div class="top">
+            <div class="text">
+                <div class="container">
+                    <h1>聯合請願認同卡</h1>
+                    <h2>我認同樹葬</h2>
+                    <h2>支持新北市政府在公墓用地殯葬文化再升級積極闢建</h2>
+                    <h2>全台首座E S G樹葬場域</h2>
+                    <p class="pt-3">在觀音聖境回歸，大自然的循環就是最美的紀念。</p>
+                </div>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="container">
+                <div class="text">
+                    <h3>請求新北市政府闢建有規模的樹葬場域</h3>
+                    <p>政府國家應該要主動闢建</p>
+                    <p>全國首座森林生態不翻淨土善循環的樹葬場域</p>
+                    <br>
+                    <h3>北.北.桃.基.目前市區公立納骨塔滿座。</h3>
+                    <h3>請將無主.無名.無後代.期滿20年遷骨放樹葬，方便騰清塔位。</h3>
+                    <p>為市區納骨塔期滿遷骨服務</p>
+                    <br>
+                    <h3>低碳可降解的生態樹葬，</h3>
+                    <h3>可以讓後代子孫省去長期房.地稅金與諸多的管理費。</h3>
+                    <p>ESG節能減碳為百姓省錢</p>
+                    <h3>讓孝心不再受限於金錢，讓慈悲與樹葬同行讓先人入土為安。</h3>
+                    <p>用樹葬推廣節葬文化</p>
+                    <br>
+                </div>
+                <div class="pic">
+                    <img src="./img/petition-mid01.webp" alt="">
+                </div>
+                <div class="referendum-pic">
+                    <img src="./img/referendum.webp" alt="">
+                    <div class="referendum-atag">
+                        <a href="index.html">
+                            <img src="./img/referendum-atag.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="a-tag">
+                    <a href="#">索取樹葬請願認同卡</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="page-button pb-0 text-center">
+                <a href="index.html">← 回上一頁</a>
+            </div>
+        </div>
+        
+
+    </section>
+
+    <!-- header -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainMenu = document.getElementById('mainMenu');
+            const dropdownToggles = document.querySelectorAll('.classynav .has-dropdown > a');
+            const mobileBreakpoint = 768; 
+
+            menuToggle.addEventListener('click', function() {
+                mainMenu.classList.toggle('active'); 
+            });
+
+            dropdownToggles.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= mobileBreakpoint) {
+                        e.preventDefault(); 
+                        const parentLi = link.closest('li');
+                        parentLi.classList.toggle('dropdown-open');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
